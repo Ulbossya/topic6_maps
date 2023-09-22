@@ -1,0 +1,185 @@
+//1.Write a Dart program to triple all numbers in a given list of integers. Use Dart map.
+// void main() {
+//   List<int> numbers = [5, 6, 7, 8, 9];
+
+//   List<int> triple = numbers.map((number) => number * 3).toList();
+
+//   print("$numbers");
+//   print("$triple");
+// }
+
+
+
+//2.Write a Dart program to add three given lists using Dart map and lambda.
+// void main() {
+//   List<int> list1 = [1, 2, 3];
+//   List<int> list2 = [4, 5, 6];
+//   List<int> list3 = [7, 8, 9];
+
+//   List<int> result = addLists(list1, list2, list3);
+
+//   print("List1$list1");
+//   print("List2$list2");
+//   print("List3$list3");
+//   print("$result");
+// }
+
+// List<int> addLists(List<int> list1, List<int> list2, List<int> list3) {
+//   return List<int>.generate(list1.length, (index) => list1[index] + list2[index] + list3[index]);
+// }
+
+//3.Write a Dart program to listify the list of given strings individually using Dart map.
+
+// void main() {
+//   List<String> strings = ["Ulbosyn", "Sayakbay", "Dosmahankyzy"];
+
+//   List<List<String>> listify = strings.map((str) => str.split('')).toList();
+
+//   for (List<String> list in listify) {
+//     print(list);
+//   }
+// }
+
+
+//4.Write a Dart program to create a list containing the power of said number in bases raised to the corresponding number in the index using Dart map.
+// import 'dart:math';
+
+// void main() {
+//   int base = 2;
+//   int length = 5;
+
+//   List<int> power = createpowerslist(base, length);
+
+//   print("$base");
+//   print("$power");
+// }
+// List<int> createpowerslist(int base, int length) {
+//   return List<int>.generate(length, (index) => pow(base, index).toInt());
+// }
+
+
+//5.Write a Dart program to convert all the characters into uppercase and lowercase and eliminate duplicate letters from a given sequence. Use the map() function.
+// void main() {
+//   String input = "Ulbosyn Sayakbay";
+
+//   String upperCaseResult = input.split('').map((char) => char.toUpperCase()).join('');
+
+//   String lowerCaseResult = input.split('').map((char) => char.toLowerCase()).join('');
+
+//   print("original:$input");
+//   print("uppercase: $upperCaseResult");
+//   print("lowercase: $lowerCaseResult");
+// }
+
+
+//6.Write a Dart program to add two given lists and find the difference between them. Use the map() function.
+  
+//   void main() {
+//   List<int> list1 = [9, 8, 7, 6, 5];
+//   List<int> list2 = [5, 6, 7, 8, 9];
+
+//   List<int> sumList = addLists(list1, list2);
+//   List<int> differenceList = subtractLists(list1, list2);
+
+//   print("List1 $list1");
+//   print("List2 $list2");
+//   print("Sum $sumList");
+//   print("Difference $differenceList");
+// }
+
+// List<int> addLists(List<int> list1, List<int> list2) {
+//   return List<int>.generate(list1.length, (index) => list1[index] + list2[index]);
+// }
+
+// List<int> subtractLists(List<int> list1, List<int> list2) {
+//   return List<int>.generate(list1.length, (index) => list1[index] - list2[index]);
+// }
+
+//7.Write a Dart program to create a new list taking specific elements from a tuple and convert a string value to an integer.
+// void main() {
+//   List<dynamic> tuple = ['Ulbosyn', 'sayakbay', '18', '46', 'apple'];
+//   List<int> convertedList = createNewList(tuple);
+
+//   print("$tuple");
+//   print("new list $convertedList");
+// }
+
+// List<int> createNewList(List<dynamic> tuple) {
+//   List<int> result = [];
+//   for (dynamic item in tuple) {
+//     if (item is String) {
+//       try {
+//         int intValue = int.parse(item);
+//         result.add(intValue);
+//       } catch (e) {
+//       }
+//     }
+//   }
+//   return result;
+// }
+
+//9.Write a Dart program to compute the sum of elements of an array of integers. Use the map() function
+// void main() {
+//   List<int> numbers = [5, 4, 3, 2, 1];
+//   List<int> mapp = numbers.map((int number) => number).toList();
+//   int sum = mapp.reduce((int value, int element) => value + element);
+
+//   print(numbers);
+//   print(mapp);
+//   print(sum);
+// }
+
+
+//10.Write a Dart program to find the ratio of positive numbers, negative numbers and zeroes in an array of integers
+// void main() {
+//   List<int> numbers = [3, -5, 2, 0, 8];
+//   int totalNumbers = numbers.length;
+//   int positive = numbers.where((number) => number > 0).length;
+//   int negative = numbers.where((number) => number < 0).length;
+//   int zero = numbers.where((number) => number == 0).length;
+
+//   double positive1 = positive / totalNumbers;
+//   double negative1 = negative / totalNumbers;
+//   double zero1 = zero / totalNumbers;
+//   print(numbers);
+//   print(positive1);
+//   print(negative1);
+//   print(zero1);
+// }
+
+//11.Write a Dart program to count the same pair in two given lists. use map() function
+//Task 11
+// void main() {
+//   List<int> list1 = [4, 5, 6, 7, 8, 9];
+//   List<int> list2 = [9, 8, 7, 6, 5, 4];
+//   Set<int> set1 = Set<int>.from(list1);
+//   int samePairCount = 0;
+  
+//   list2.forEach((element) {
+//     if (set1.contains(element)) {
+//       samePairCount++;
+//       set1.remove(element);
+//     }
+//   });
+
+//   print(list1);
+//   print(list2);
+//   print(samePairCount);
+// }
+
+//13.Write a Dart program to split a given dictionary of lists into list of dictionaries using the map function.
+// void main() {
+//   Map<String, List<int>> inputDictionary = {
+//     'first': [8, 7, 6],
+//     'second': [5, 4],
+//     'third': [3, 2, 1],
+//   };
+
+//   List<Map<String, List<int>>> resultList =
+//       inputDictionary.entries.map((entry) => {entry.key: entry.value}).toList();
+
+//   resultList.forEach((result) {
+//     print(result);
+//   });
+// }
+
